@@ -106,6 +106,30 @@ Using TensorFlow, optimize the model in order to achieve a target predictive acc
 
 3. What steps did you take to try and increase model performance?
 
+Attempt #1 
+- Binned the ASK_AMT Column into smaller bins and added it to the categorical list for encoding 
+ ![image](https://user-images.githubusercontent.com/94234511/162556112-b1783c1e-4b59-4d76-9d99-58d4c766bf60.png)
+
+ ![image](https://user-images.githubusercontent.com/94234511/162556104-3443f2f0-c8ac-4c5c-a739-102405f81d5a.png)
+
+ ![image](https://user-images.githubusercontent.com/94234511/162556176-1ff1dadd-b4ea-42cb-b994-5d399c6fcfb4.png)
+
+- Once the new model is compiled, scaled and analyzed, the accuracy of the model improved to 74.45% for the training dataset and 73% for the test data  
+![image](https://user-images.githubusercontent.com/94234511/162556835-c63c7468-a359-4647-a0ec-e6db97348dc7.png)
+
+Attempt #2
+- Add additional layers to the neural network
+
+  ![image](https://user-images.githubusercontent.com/94234511/162556513-77e34448-c32a-4e51-949d-06d1ef6b4c99.png)
+
+- Once the new model is compiled, scaled and analyzed, the accuracy of the model is largely unchanged for both the training and test datasets at 73%, just a bit below the target. A quick comparison of the accuracy during fitting shows a fairly small rate of change suggesting no added value from additional training (increasing the # number of EPOCHS).  
+
+  ![image](https://user-images.githubusercontent.com/94234511/162556859-ea79b7ee-3f09-4c92-88b7-f08046fb3ade.png)
+
+Attempt #3
+
+A return to the dataset for a second look at the features may be the only way to further improve the models ability to reach the goal of 75% accuracy to predict successful applicants. 
+
 
 
 ## Summary: 
