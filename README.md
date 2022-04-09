@@ -4,7 +4,7 @@
 
 ## Overview
  
-From Alphabet Soup’s business team, Beks received a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of columns that capture metadata about each organization, such as the following:
+From Alphabet Soup’s business team, Beks received a CSV file ++++++++ containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of columns that capture metadata about each organization, such as the following:
 
 - EIN and NAME—Identification columns
 - APPLICATION_TYPE—Alphabet Soup application type
@@ -18,26 +18,28 @@ From Alphabet Soup’s business team, Beks received a CSV containing more than 3
 - ASK_AMT—Funding amount requested
 - IS_SUCCESSFUL—Was the money used effectively
 
-you’ll use the features in the provided dataset to help Beks create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup.''
+The purpose of this analysis is to help Beks create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup.
 
 ## Results 
 
 ### Deliverable 1: Preprocessing Data for a Neural Network Model
-Using your knowledge of Pandas and the Scikit-Learn’s StandardScaler(), you’ll need to preprocess the dataset in order to compile, train, and evaluate the neural network model later in Deliverable 2. Import dependencies and load the datafile as indicated in the image of the code block below:
+Using Pandas and the Scikit-Learn’s StandardScaler(), preprocess the dataset in order to compile, train, and evaluate the neural network model later in Deliverable 2.
+
+Import dependencies and load the datafile as indicated in the image of the code block below:
 ![image](https://user-images.githubusercontent.com/94234511/162554578-40c3c3f5-a7a7-45c6-bddd-290a159e00fe.png)
 
-### Data Preprocessing
+#### Data Preprocessing
 Follow these basic steps to preprocess the data for compilation and modeling. 
 - Create a density plot for column values
 - Create bins for low counts
 The variables APPLICATION_TYPE and CLASSIFICATION were identified for binning.  See the code snippets below:
-![image](https://user-images.githubusercontent.com/94234511/162554757-00442e54-8878-40d9-8563-27b877bae39e.png)
+ ![image](https://user-images.githubusercontent.com/94234511/162554757-00442e54-8878-40d9-8563-27b877bae39e.png)
 
-![image](https://user-images.githubusercontent.com/94234511/162554792-a16298a5-9838-47e6-b104-f8f7091ae417.png)
+ ![image](https://user-images.githubusercontent.com/94234511/162554792-a16298a5-9838-47e6-b104-f8f7091ae417.png)
 
-![image](https://user-images.githubusercontent.com/94234511/162554771-f877cd4e-99ce-4571-9e62-bb7173777ce9.png)
+ ![image](https://user-images.githubusercontent.com/94234511/162554771-f877cd4e-99ce-4571-9e62-bb7173777ce9.png)
 
-![image](https://user-images.githubusercontent.com/94234511/162554804-a88f3d78-802e-40d9-a2db-0f657142e2b7.png)
+ ![image](https://user-images.githubusercontent.com/94234511/162554804-a88f3d78-802e-40d9-a2db-0f657142e2b7.png)
 
 - Place rare categorical values in a separate column
 - Create an instance of OneHotEncoder and fit the encoder with values
@@ -66,22 +68,32 @@ The variables containing identification are not useful in predicting and can con
 ![image](https://user-images.githubusercontent.com/94234511/162554216-c575b52c-5c51-4247-9a1b-5917640bddac.png)
 
 ### Deliverable 2: Compile, Train, and Evaluate the Model
-Using your knowledge of TensorFlow, you’ll design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. You’ll need to think about how many inputs there are before determining the number of neurons and layers in your model. Once you’ve completed that step, you’ll compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
-
-### Compiling, Training, and Evaluating the Model
-1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
-2. Were you able to achieve the target model performance?
-3. What steps did you take to try and increase model performance?
+Using TensorFlow, design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. Then, compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy and save the results after training.  
 
 ### Coding steps
-- Deep learning model design
-- Train and evaluate the model
-- Create a checkout and callback to save the model’s weights
-- Save the results after training
+Follow these basic steps to perform the inital data compilation and modeling using the preprocessed data from Deliverable 1.
 
+- Deep learning model design
+  ![image](https://user-images.githubusercontent.com/94234511/162555389-bd642ccd-0b26-4b53-817e-ee4ef7e1d476.png)
+  
+- Create a checkout and callback to save the model’s weights
+  ![image](https://user-images.githubusercontent.com/94234511/162555569-b90eb51f-48d7-4e72-be01-ea3340f05fe0.png)
+
+- Train and evaluate the model
+  ![image](https://user-images.githubusercontent.com/94234511/162555438-33cf4965-5043-45b7-8a29-ad842bd0f06f.png)
+
+- Save the results after training
+  ![image](https://user-images.githubusercontent.com/94234511/162555593-52e6a3dd-1cbc-49eb-acbd-50f8d406d96f.png)
+
+#### Compiling, Training, and Evaluating the Model
+1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
+There were a totall of 110 neurons deployed in 2 hidden layers.  The relu activitation function was used for both hidden layers and the sigmoid function was used for the output layer. 
+
+2. Were you able to achieve the target model performance?
+The training accuracy was just slightly higher than 50% (53.24) but the model was only able to give 69% accuracy with the test data.  Test loss was 1.399.  Training accuracy peaked at about EPOCH 30 (>67%) but started to decline after about EPOCH 42 suggesting some overfitting.  
 
 ### Deliverable 3: Optimize the Model
-Using your knowledge of TensorFlow, optimize your model in order to achieve a target predictive accuracy higher than 75%. If you can't achieve an accuracy higher than 75%, you'll need to make at least three attempts to do so.
+Using TensorFlow, optimize the model in order to achieve a target predictive accuracy higher than 75%. If you can't achieve an accuracy higher than 75%, you'll need to make at least three attempts to do so.
 
 - Optimize a neural network
 - Deep learning model design
@@ -91,6 +103,10 @@ Using your knowledge of TensorFlow, optimize your model in order to achieve a ta
 - Random forest vs deep learning
 - Create a checkout and callback to save the model’s weights
 - Save the results after training
+
+3. What steps did you take to try and increase model performance?
+
+
 
 ## Summary: 
 Summarize the overall results of the deep learning model. 
