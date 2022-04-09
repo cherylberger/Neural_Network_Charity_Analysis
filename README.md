@@ -30,19 +30,27 @@ Using your knowledge of Pandas and the Scikit-Learn’s StandardScaler(), you’
 Follow these basic steps to preprocess the data for compilation and modeling. 
 - Create a density plot for column values
 - Create bins for low counts
+The variables APPLICATION_TYPE and CLASSIFICATION were identified for binning.  See the code snippets below:
+![image](https://user-images.githubusercontent.com/94234511/162554757-00442e54-8878-40d9-8563-27b877bae39e.png)
+
+![image](https://user-images.githubusercontent.com/94234511/162554792-a16298a5-9838-47e6-b104-f8f7091ae417.png)
+
+![image](https://user-images.githubusercontent.com/94234511/162554771-f877cd4e-99ce-4571-9e62-bb7173777ce9.png)
+
+![image](https://user-images.githubusercontent.com/94234511/162554804-a88f3d78-802e-40d9-a2db-0f657142e2b7.png)
+
 - Place rare categorical values in a separate column
 - Create an instance of OneHotEncoder and fit the encoder with values
 - Merge DataFrames and drop original columns
 - Use the StandardScaler() module to standardize numerical variables
 - Generate a categorical variable list
 - Split the preprocessed data into features and target arrays, and scale the data
+- Split the data into training and test sets
 
 #### 1. What variable(s) are considered the target(s) for your model?
 The variable IS_SUCCESSFUL contains the column with the target for the model as we seek to predict the success of applicants from the data provided. 
-   # Split our preprocessed data into our features and target arrays
-   y = application_df.IS_SUCCESSFUL
-   X = application_df.drop("IS_SUCCESSFUL", axis=1)
-
+![image](https://user-images.githubusercontent.com/94234511/162554845-9653092e-a3a7-4df6-ae27-b6b3df39aec4.png)
+ 
 #### 2. What variable(s) are considered to be the features for your model?
 After binning, the variables APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, INCOME_AMT and SPECIAL_CONSIDERATIONS have a reasonable number of bins and maybe useful in developing the predictive model. We would consider using these features in our model design and assess the predictive performance in Deliverable 2. See the code images below to generate a categorical list and use One Hot Encoder method to fit and transform the categories and add th encoded variables to a new dataframe. 
 
@@ -54,6 +62,7 @@ After binning, the variables APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_
 The variables containing identification are not useful in predicting and can confuse the model if the datatype is integer. For this exercise we removed the 'EIN' and 'NAME' columns as indicated in the code below.
 ![image](https://user-images.githubusercontent.com/94234511/162554156-889de27d-a629-444e-8c3e-cac58e8e6f98.png)
 
+- Split the preprocessed data into features and target arrays, and scale the data
 ![image](https://user-images.githubusercontent.com/94234511/162554216-c575b52c-5c51-4247-9a1b-5917640bddac.png)
 
 ### Deliverable 2: Compile, Train, and Evaluate the Model
