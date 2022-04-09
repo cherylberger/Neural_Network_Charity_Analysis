@@ -70,7 +70,7 @@ The variables containing identification are not useful in predicting and can con
 ### Deliverable 2: Compile, Train, and Evaluate the Model
 Using TensorFlow, design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. Then, compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy and save the results after training.  
 
-### Coding steps
+#### Coding steps
 Follow these basic steps to perform the inital data compilation and modeling using the preprocessed data from Deliverable 1.
 
 - Deep learning model design
@@ -106,7 +106,7 @@ Using TensorFlow, optimize the model in order to achieve a target predictive acc
 
 3. What steps did you take to try and increase model performance?
 
-Attempt #1 
+#### Attempt #1 
 - Binned the ASK_AMT Column into smaller bins and added it to the categorical list for encoding 
  ![image](https://user-images.githubusercontent.com/94234511/162556112-b1783c1e-4b59-4d76-9d99-58d4c766bf60.png)
 
@@ -117,18 +117,20 @@ Attempt #1
 - Once the new model is compiled, scaled and analyzed, the accuracy of the model improved to 74.45% for the training dataset and 73% for the test data  
 ![image](https://user-images.githubusercontent.com/94234511/162556835-c63c7468-a359-4647-a0ec-e6db97348dc7.png)
 
-Attempt #2
+#### Attempt #2
 - Add additional layers to the neural network
 
   ![image](https://user-images.githubusercontent.com/94234511/162556513-77e34448-c32a-4e51-949d-06d1ef6b4c99.png)
 
 - Once the new model is compiled, scaled and analyzed, the accuracy of the model is largely unchanged for both the training and test datasets at 73%, just a bit below the target. A quick comparison of the accuracy during fitting shows a fairly small rate of change suggesting no added value from additional training (increasing the # number of EPOCHS).  
 
-  ![image](https://user-images.githubusercontent.com/94234511/162556859-ea79b7ee-3f09-4c92-88b7-f08046fb3ade.png)
+  ![image](https://user-images.githubusercontent.com/94234511/162556977-db1bc9b4-508e-446c-b986-62c3addff155.png)
 
-Attempt #3
+  ![image](https://user-images.githubusercontent.com/94234511/162556990-6c6594ba-a48d-4b82-81d1-3b8f0c5c2d4b.png)
 
-A return to the dataset for a second look at the features may be the only way to further improve the models ability to reach the goal of 75% accuracy to predict successful applicants. 
+#### Attempt #3
+
+- A return to the dataset for a second look at the features may be the only way to further improve the models ability to reach the goal of 75% accuracy to predict successful applicants. 
 
 
 
