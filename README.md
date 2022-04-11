@@ -137,5 +137,10 @@ Using TensorFlow, optimize the model in order to achieve a target predictive acc
 ## Summary: 
 Summarize the overall results of the deep learning model. 
 
+As shown above, the initial setup for the model did not perform at the required level, coming in no better than 69%. After binning the ASK_AMT column (which has noisy data) the model design was iterated and obtained a much improved accuracy rating of 73% for the test data.  In an effort to realize the goal of 75% accuracy, a second attempt to improve the model was performed by adding additional layers to the neural network.  However, one the data was compiled, scaled and analyzed, the accuracy was improved over the initial model but still no greater than 73% for the test data.  
 
-Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+All other models had lower final accuracies than this, 
+It an be seen that changing the number of hidden layers and neurons had a negligible effect on increasing model accuracy. Further adjustment may lead to an invalid model or one that overfits the dataset.
+
+I would recommend a Random Forest classifier for an alternate model design. This is due to Random Forest ability of performing binary classification, the ability to handle large datasets, and the reduction in code which can achieve comparable accuracy predictions.  Alternatively, re-evaluating the data used in the model may provide insights into other features that could be analyzed. 
+
