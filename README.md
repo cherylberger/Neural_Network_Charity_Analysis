@@ -4,7 +4,7 @@
 
 ## Overview
  
-From Alphabet Soup’s business team, Beks received a CSV file ++++++++ containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of columns that capture metadata about each organization, such as the following:
+From Alphabet Soup’s business team, Beks received a CSV file containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of columns that capture metadata about each organization, such as the following:
 
 - EIN and NAME—Identification columns
 - APPLICATION_TYPE—Alphabet Soup application type
@@ -21,6 +21,11 @@ From Alphabet Soup’s business team, Beks received a CSV file ++++++++ containi
 The purpose of this analysis is to help Beks create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup.
 
 ## Results 
+
+### Resources: 
+Data file https://github.com/cherylberger/Neural_Network_Charity_Analysis/blob/main/Challenge/Resources/charity_data.csv
+Deliverable 1 and 2
+Deliverable 3 
 
 ### Deliverable 1: Preprocessing Data for a Neural Network Model
 Using Pandas and the Scikit-Learn’s StandardScaler(), preprocess the dataset in order to compile, train, and evaluate the neural network model later in Deliverable 2.
