@@ -25,7 +25,7 @@ The purpose of this analysis is to help Beks create a binary classifier that is 
 ### Resources: 
 - Data file: https://github.com/cherylberger/Neural_Network_Charity_Analysis/blob/main/Challenge/Resources/charity_data.csv
 - Deliverable 1 and 2 Code: https://github.com/cherylberger/Neural_Network_Charity_Analysis/blob/main/Challenge/AlphabetSoupCharity.ipynb
-- Deliverable 3 Code: 
+- Deliverable 3 Code: https://github.com/cherylberger/Neural_Network_Charity_Analysis/blob/main/Challenge/AlphabetSoupCharityOptimization.ipynb
 
 ### Deliverable 1: Preprocessing Data for a Neural Network Model
 Using Pandas and the Scikit-Learn’s StandardScaler(), preprocess the dataset in order to compile, train, and evaluate the neural network model later in Deliverable 2.
@@ -109,7 +109,8 @@ Using TensorFlow, optimize the model in order to achieve a target predictive acc
 - Create a checkout and callback to save the model’s weights
 - Save the results after training
 
-3. What steps did you take to try and increase model performance?
+3. What steps did you take to try and increase model performance?  
+First, I revisting the data columns and noted the noisy data in the ASK_AMT column.  I wrote a simple conditional statement to bin the ASK_AMT and then dropped it from the final model.  After further preprocessing of the data, two attempts were made to optimize the neural network by adding additional layers and selecting alternative activation functions. 
 
 #### Attempt #1 
 - Binned the ASK_AMT Column into smaller bins and added it to the categorical list for encoding 
