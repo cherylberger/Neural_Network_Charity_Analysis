@@ -118,7 +118,7 @@ Using TensorFlow, optimize the model in order to achieve a target predictive acc
 ![image](https://user-images.githubusercontent.com/94234511/162556835-c63c7468-a359-4647-a0ec-e6db97348dc7.png)
 
 #### Attempt #2
-- Add additional layers to the neural network
+- Add additional layers to the neural network and try an alternative activiation function for the second and third hidden layers, the tahn function. 
 
   ![image](https://user-images.githubusercontent.com/94234511/162556513-77e34448-c32a-4e51-949d-06d1ef6b4c99.png)
 
@@ -130,17 +130,18 @@ Using TensorFlow, optimize the model in order to achieve a target predictive acc
 
 #### Attempt #3
 
-- A return to the dataset for a second look at the features may be the only way to further improve the models ability to reach the goal of 75% accuracy to predict successful applicants. 
+- Add an additional hidden layer and modify the activation functions used, returning to the assignments from Attempt 1 and adding the tahn activation function to the last hidden layer. 
 
+![image](https://user-images.githubusercontent.com/94234511/162656090-45b4b543-b9e2-4193-830b-e2e2c03dc26a.png)
 
+One the model design has been modified, the model is trained and the accuracy evaluated to determine if the updates have improved the predictive abilities. The final attempt to optimize the model has again resulted in approximately 73% accuracy, no marked improvement over Attempt #1.  
+
+![image](https://user-images.githubusercontent.com/94234511/162656631-95150b75-673f-4734-9df4-21adfea5712f.png)
+
+![image](https://user-images.githubusercontent.com/94234511/162656693-82e63ff8-2696-46b5-8ce7-0991a4d88a0d.png)
 
 ## Summary: 
-Summarize the overall results of the deep learning model. 
+As shown above, the initial setup for the model did not perform to the required level, coming in no better than 69%. After binning the ASK_AMT column (which has noisy data) the model design was iterated and obtained a much improved accuracy rating of 73% for the test data.  In an effort to realize the goal of 75% accuracy, a second attempt to improve the model was performed by adding additional layers to the neural network and using the tahn activation function for 2 of the hidden layers.  However, one the data was compiled, scaled and re-analyzed, the accuracy was improved over the initial model but still no greater than 73% for the test data.  A third attempt was made to optimize the model by adding additional layers and returning to the relu activiation function for the first layer and using both the tahn and sigmoid activitation functions. It an be seen that changing the number of hidden layers and neurons had a negligible effect on increasing model accuracy. Further adjustment may lead to an invalid model or one that overfits the dataset.  Despite the model used, the loss value is fairly high and does not change much with the various optimziation efforts for the model.  These models are not resulting in much learning, there will likely be some significant errors but for only some of the data. 
 
-As shown above, the initial setup for the model did not perform at the required level, coming in no better than 69%. After binning the ASK_AMT column (which has noisy data) the model design was iterated and obtained a much improved accuracy rating of 73% for the test data.  In an effort to realize the goal of 75% accuracy, a second attempt to improve the model was performed by adding additional layers to the neural network.  However, one the data was compiled, scaled and analyzed, the accuracy was improved over the initial model but still no greater than 73% for the test data.  
-
-All other models had lower final accuracies than this, 
-It an be seen that changing the number of hidden layers and neurons had a negligible effect on increasing model accuracy. Further adjustment may lead to an invalid model or one that overfits the dataset.
-
-I would recommend a Random Forest classifier for an alternate model design. This is due to Random Forest ability of performing binary classification, the ability to handle large datasets, and the reduction in code which can achieve comparable accuracy predictions.  Alternatively, re-evaluating the data used in the model may provide insights into other features that could be analyzed. 
+I would recommend trying the Random Forest Classifier as an alternate model design. This is due to the utility of the Random Forest Classifier for performing binary classification, the ability to handle large datasets, and the reduction in code which can achieve comparable accuracy predictions.  Since we are working on multiple decision trees there less chance of over-fitting.  Since it runs on a larger data set, the accuracy should be higher and since it runs on a larger data set, you can estimate the missing values as well.   Alternatively, re-evaluating the data used in the model may provide insights into other features that could be analyzed. 
 
